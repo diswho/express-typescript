@@ -1,0 +1,15 @@
+node_modules/.package-lock.json
+node_modules/.bin/acorn
+node_modules/.bin/acorn.cmd
+node_modules/.bin/acorn.ps1
+node_modules/.bin/mime
+node_modules/.bin/mime.cmd
+node_modules/.bin/mime.ps1
+node_modules/.bin/nodemon
+node_modules/.bin/nodemon.cmd
+node_modules/.bin/nodemon.ps1
+node_modules/.bin/nodetouch
+node_modules/.bin/nodetouch.cmd
+node_modules/.bin/nodetouch.ps1
+node_modules/*
+package-lock.json
