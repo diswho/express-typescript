@@ -51,3 +51,31 @@ running again
 `npx tsc --init`
 
 # Reorganizing the Project Structure Even More
+
+# use compression middleware in Express.js with TypeScript
+
+`npm i -s compression`
+
+`npm i -D @types/compression`
+
+# Using body-parser Middleware
+
+`npm i -s body-parser`
+
+`npm i -D @types/body-parser`
+
+# Using cors Middleware
+
+`npm i -s cors`
+
+`npm i -D @types/cors`
+
+# Create a Logging Application-Level Middleware
+
+`npm i -s uuid`
+
+`npm i -D @types/uuid`
+
+`npm i -s chalk`
+`npm i -s chalk@5.2.0`
+`npm i -D @types/chalk`
