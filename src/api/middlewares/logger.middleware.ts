@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { v4 as uuidv4 } from "uuid";
-import chalk from "chalk";
+import { green, blue, blueBright, red } from "chalk";
 
 const getProcessingTimeInMS = (time: [number, number]): string => {
   return `${(time[0] * 1000 + time[1] / 1e6).toFixed(2)}ms`;
@@ -40,16 +40,17 @@ function logger(req: Request, res: Response, next: NextFunction) {
 
   // log start of the execution process
   const start = process.hrtime();
-  const startText = chalk.green(`START:${getProcessingTimeInMS(start)}`);
-  const idText = chalk.blue(`[${id}]`);
-  const timeStampText = chalk.blueBright(`[${timestamp}]`);
+
+  const startText = green(`START:${getProcessingTimeInMS(start)}`);
+  const idText = blue(`[${id}]`);
+  const timeStampText = blueBright(`[${timestamp}]`);
   console.log(`${idText}${timeStampText} ${method}:${url} ${startText}`);
 
   // trigger once a response is sent to the client
   res.once("finish", () => {
     // log end of the execution process
     const end = process.hrtime(start);
-    const endText = chalk.red(`END:${getProcessingTimeInMS(end)}`);
+    const endText = red(`END:${getProcessingTimeInMS(end)}`);
     console.log(
       `${idText}${timeStampText} ${method}:${url} ${res.statusCode} ${endText}`
     );
