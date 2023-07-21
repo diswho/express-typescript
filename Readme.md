@@ -79,3 +79,9 @@ running again
 `npm i -s chalk`
 `npm i -s chalk@5.2.0`
 `npm i -D @types/chalk`
+
+# Generate RSA Key Pair
+
+`openssl genrsa -des3 -out private.pem 2048`
+
+`openssl rsa -in private.pem -outform PEM -pubout -out public.pem`

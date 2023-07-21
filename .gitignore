@@ -13,3 +13,6 @@ node_modules/.bin/nodetouch.cmd
 node_modules/.bin/nodetouch.ps1
 node_modules/*
 package-lock.json
+
+private.key
+public.key
